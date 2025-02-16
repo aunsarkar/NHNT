@@ -4,60 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arun Sarkar - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: black;
-            color: #00FF00;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0d0d;
+            color: #00ffcc;
+            font-family: 'Orbitron', sans-serif;
             padding: 20px;
+            text-shadow: 0px 0px 8px #00ffcc;
         }
         .terminal {
             max-width: 800px;
             margin: auto;
-            border: 2px solid #00FF00;
+            border: 2px solid #ff00ff;
             padding: 20px;
             border-radius: 5px;
+            background: rgba(10, 10, 10, 0.9);
+            box-shadow: 0px 0px 20px #ff00ff;
         }
         .prompt {
-            color: #FFFFFF;
+            color: #ffcc00;
         }
         a {
-            color: #00FF00;
+            color: #ff00ff;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #ffcc00;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #ffcc00; }
+        }
     </style>
 </head>
 <body>
     <div class="terminal">
-        <p class="prompt">$ cat Arun_Sarkar_Resume.txt</p>
+        <p class="prompt typing">$ cat Arun_Sarkar_Resume.txt</p>
         <pre>
-Name: Arun Sarkar
-Location: Hamburg, Germany
-Email: <a href="mailto:aunsarkar@gmail.com">aunsarkar@gmail.com</a>
-LinkedIn: <a href="https://www.linkedin.com/in/arun-sarkar/" target="_blank">linkedin.com/in/arun-sarkar</a>
+<span style="color: #ffcc00;">Name:</span> Arun Sarkar
+<span style="color: #ffcc00;">Location:</span> Hamburg, Germany
+<span style="color: #ffcc00;">Email:</span> <a href="mailto:aunsarkar@gmail.com">aunsarkar@gmail.com</a>
+<span style="color: #ffcc00;">LinkedIn:</span> <a href="https://www.linkedin.com/in/arun-sarkar/" target="_blank">linkedin.com/in/arun-sarkar</a>
 
-==============================
-> PROFILE
-------------------------------
+================================
+<span style="color: #ff0000;">> PROFILE</span>
+--------------------------------
 Operations & Incident Management professional transitioning into DevOps & Site Reliability Engineering (SRE).
 Experience in process automation, monitoring, and cross-functional collaboration.
 Passionate about system reliability, cloud automation, and CI/CD optimization.
 
-==============================
-> SKILLS
-------------------------------
+================================
+<span style="color: #ff0000;">> SKILLS</span>
+--------------------------------
 - Cloud & Infrastructure: AWS (EC2, S3, IAM), Terraform, Ansible
 - CI/CD & Automation: GitHub Actions, Jenkins, Docker, Kubernetes
 - Monitoring & Incident Management: Prometheus, Grafana, Datadog
 - Scripting & Development: Bash, Python (beginner), Linux CLI
 - Security & Compliance: GDPR, IAM, Role-Based Access Control (RBAC)
 
-==============================
-> EXPERIENCE
-------------------------------
+================================
+<span style="color: #ff0000;">> EXPERIENCE</span>
+--------------------------------
 CS Operations Manager | Raisin SE, Hamburg (Sep 2022 - Present)
 - Automated incident management workflows (-30% resolution time)
 - Collaborated with DevOps & Engineering to optimize authentication flows
@@ -66,19 +85,19 @@ Customer Service Associate | Raisin SE, Hamburg (Jan 2021 - Aug 2022)
 - Bridged Product, Engineering, and Operations for system reliability
 - Assisted in compliance and security operations (GDPR, KYC, AML)
 
-==============================
-> CERTIFICATIONS
-------------------------------
+================================
+<span style="color: #ff0000;">> CERTIFICATIONS</span>
+--------------------------------
 - AWS Certified Cloud Practitioner (In Progress)
 - Docker & Kubernetes Fundamentals - KodeKloud
 - Terraform for Beginners - HashiCorp
 
-==============================
-> CONTACT
-------------------------------
-Email: <a href="mailto:aunsarkar@gmail.com">aunsarkar@gmail.com</a>
+================================
+<span style="color: #ff0000;">> CONTACT</span>
+--------------------------------
 LinkedIn: <a href="https://www.linkedin.com/in/arun-sarkar/" target="_blank">linkedin.com/in/arun-sarkar</a>
         </pre>
     </div>
 </body>
 </html>
+
