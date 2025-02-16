@@ -37,12 +37,11 @@
         a:hover {
             text-decoration: underline;
         }
-        .typing {
+        .typing pre {
             overflow: hidden;
-            white-space: nowrap;
             border-right: 2px solid #ffcc00;
             width: 0;
-            animation: typing 5s steps(60, end) forwards, blink 0.75s step-end infinite;
+            animation: typing 5s steps(100, end) forwards, blink 0.75s step-end infinite;
         }
         @keyframes typing {
             from { width: 0 }
@@ -61,21 +60,24 @@
             position: absolute;
             bottom: 20px;
             right: 20px;
-            width: 150px;
+            width: 200px;
             height: 150px;
-            background: url('stick-figure-animation.gif') no-repeat center;
-            background-size: contain;
-            animation: pushBoulder 3s ease-in-out infinite alternate;
+        }
+        .sisyphus svg {
+            width: 100%;
+            height: 100%;
         }
         @keyframes pushBoulder {
-            from { transform: translateY(10px); }
-            to { transform: translateY(-10px); }
+            0% { transform: translateY(10px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(10px); }
         }
     </style>
 </head>
 <body>
     <div class="terminal">
-        <p class="prompt typing">$ cat Arun_Sarkar_Resume.txt</p>
+        <p class="prompt">$ cat Arun_Sarkar_Resume.txt</p>
+        <div class="typing">
         <pre>
 <span style="color: #ffcc00;">Name:</span> Arun Sarkar
 <span style="color: #ffcc00;">Location:</span> Hamburg, Germany
@@ -84,7 +86,7 @@
 ================================
 <span style="color: #ff0000;">> PROFILE</span>
 --------------------------------
-Operations & Incident Management professional transitioning into DevOps & Site Reliability Engineering (SRE). 
+Operations & Incident Management professional transitioning into DevOps & Site Reliability Engineering. 
 Experience in process automation, monitoring, and cross-functional collaboration. 
 Passionate about system reliability, cloud automation, and CI/CD optimization.
 
@@ -120,7 +122,14 @@ Customer Service Associate | Raisin SE, Hamburg (Jan 2021 - Aug 2022)
 --------------------------------
 LinkedIn: <a href="https://www.linkedin.com/in/arun-sarkar/" target="_blank">linkedin.com/in/arun-sarkar</a>
         </pre>
+        </div>
     </div>
-    <div class="sisyphus"></div>
+    <div class="sisyphus">
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="10" fill="#ffcc00" />
+            <rect x="40" y="60" width="20" height="10" fill="#00ffcc" />
+            <line x1="40" y1="70" x2="30" y2="80" stroke="#ff0000" stroke-width="2" />
+        </svg>
+    </div>
 </body>
 </html>
