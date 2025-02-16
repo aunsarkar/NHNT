@@ -42,7 +42,7 @@
             white-space: nowrap;
             border-right: 2px solid #ffcc00;
             width: 0;
-            animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+            animation: typing 5s steps(60, end) forwards, blink 0.75s step-end infinite;
         }
         @keyframes typing {
             from { width: 0 }
@@ -58,23 +58,18 @@
             100% { opacity: 1; }
         }
         .sisyphus {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 100px;
-            height: 100px;
-        }
-        .stick-figure {
-            width: 50px;
-            height: 50px;
             position: absolute;
             bottom: 20px;
             right: 20px;
-            animation: moveBoulder 3s ease-in-out infinite alternate;
+            width: 150px;
+            height: 150px;
+            background: url('stick-figure-animation.gif') no-repeat center;
+            background-size: contain;
+            animation: pushBoulder 3s ease-in-out infinite alternate;
         }
-        @keyframes moveBoulder {
-            from { transform: translateY(0); }
-            to { transform: translateY(-20px); }
+        @keyframes pushBoulder {
+            from { transform: translateY(10px); }
+            to { transform: translateY(-10px); }
         }
     </style>
 </head>
@@ -126,6 +121,6 @@ Customer Service Associate | Raisin SE, Hamburg (Jan 2021 - Aug 2022)
 LinkedIn: <a href="https://www.linkedin.com/in/arun-sarkar/" target="_blank">linkedin.com/in/arun-sarkar</a>
         </pre>
     </div>
-    <div class="stick-figure">🚶‍♂️🪨</div>
+    <div class="sisyphus"></div>
 </body>
 </html>
